@@ -35,3 +35,87 @@ function findSquare(number){
 
 let result = findSquare(5);
 console.log(result);
+
+
+let fruits = ["apple","banana", "mango"]
+
+let firstFruit = fruits[0];
+let secondFruit= fruits[1];
+let thirdFruit = fruits[2]
+
+console.log(firstFruit);
+console.log(secondFruit);
+console.log(thirdFruit);
+
+fruits = ["apple", "banana"];
+fruits.push("cherry")
+console.log(fruits);
+
+
+fruits = ["apple", "mango", "carrot"];
+let numberOfFruits = fruits.length;
+console.log(numberOfFruits);
+
+
+//Creating Strings
+const singleQuoted = 'Hello';
+const  doubleQuoted = "Hello";
+const templateLiteral =`This is a multi-line string`
+
+
+//String concatenation
+const greetingJS = "Hello"+"JavaScript";
+const nameJS = "Bobby";
+const greetingTemplate = `Hello, ${nameJS}!`;
+const stringWithExpression = `The length of my name is ${nameJS.length}`
+console.log(greetingJS);
+console.log(greetingJS.length);
+console.log(greetingJS[0]);
+console.log(greetingJS[1]);
+console.log(greetingJS[-1]);
+console.log(greetingJS[5]);
+console.log(greetingJS[-4]);
+console.log(greetingJS.toLowerCase());
+console.log(greetingJS.toUpperCase());
+console.log(greetingJS.substring(0,5));
+console.log(greetingJS.includes("JavaScript"));
+console.log(greetingJS.replace("JavaScript", "World!"));
+
+const nameString = "Jennifer Chinyere"
+const greeting =" Nice to meet you"
+const greetMe = nameString+greeting
+console.log(greetMe);
+console.log(`The length of my name is ${nameString.length}`);
+console.log(nameString[0]);
+console.log(nameString.toLowerCase());
+console.log(nameString.toUpperCase());
+
+
+const sumJs = 5+3
+const differenceJS = 10-6
+const productJS = 3*5
+const quotientJs = 4/3
+const remainderJS = 4%3
+let numJs = 10;
+console.log(numJs)
+const powerJS = 2 ** 4;
+console.log(powerJS);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
