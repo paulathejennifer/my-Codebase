@@ -101,9 +101,73 @@ console.log(numJs)
 const powerJS = 2 ** 4;
 console.log(powerJS);
 
+//Functions prototypes and objects
+//Building an inventory store
+const product1 ={
+    name:"Laptop Lenovo V",
+    price: 12000,
+    displayDetails:function(){
+        return `${this.name}: $${this.price}`
+    },
+    discountedPrice:function(discountedPercentage){
+        const discountAmount=this.price*(discountedPercentage/100)
+
+        return discountAmount
+    }
+
+ 
+    
+}
+
+console.log(product1.displayDetails());
+
+//Creating multiple products
+
+//1, Factory function
+
+function createProcucts(name, price){
+    return {
+
+        name:name, price:price, displayDetails: function(){
+            return `${this.name}: Ksh. ${this.price}`
+        }
+    }
+}
+
+
+const create= createProcucts("Doll",50)
+console.log(create);
 
 
 
+const create1= createProcucts("Book",150)
+console.log(create1);
+
+//2. constructor function with prototype
+
+function myProduct(name, price){
+    this.name=name;
+    this.price=price;
+
+}
+myProduct.prototype.displayDetails=function(){
+            return `${this.name}: Ksh. ${this.price}`
+}
+
+const product= new myProduct("SmartWatch", 10000);
+console.log(product);
+
+const product3= new myProduct("Lollipop", 10);
+console.log(product3);
+
+myProduct.prototype.discountedPrice=function(discountedPercentage){
+    const discountAmount = (discountedPercentage/100)*this.price
+
+    return this.price-discountAmount;
+}
+
+
+console.log(product1.discountedPrice(20));
 
 
 
