@@ -267,13 +267,35 @@ return multiple/60
 
 }
 console.log(`When they are going to meet is after ${repeatingBusSchedules(15,24)} hours`);
+// function findMaxNumber(arr) { 
 
-function tilingFloor(dimension1,dimension2)
+//     return Math.max(...arr); 
+  
+//   } 
 
 
+function findMaxNumber(arr){
+    return Math.max(...arr)
+}
+const nums = [1,2,3,4,6,2,89]
+console.log(findMaxNumber(nums));
+console.log(findMinNumber(nums));
+
+function findMinNumber(arr){
+    return Math.min(...arr)
+}
+
+function isPalindrome(str){
+    return str.toLowerCase()===str.toLowerCase().split("").reverse().join("")
+}
+
+const name = "Nen"
+console.log(isPalindrome(name));
 
 
-
+function reverse(str){
+    reyturn
+}
 
 
 
