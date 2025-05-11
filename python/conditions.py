@@ -47,4 +47,25 @@ def countdown_with_break(start,stop):
 
         start-=1
 
-        
+
+def skip_iteration_and_jump():
+    i = 0
+    while i < limit:
+        if i == skip_value:
+            i += 1
+            continue
+        print(i)
+        i += 1
+
+def numbers_from_one_to_hundred():
+  num = 0
+  while num < 100:
+    num+=1
+    if num % 2 != 0:
+        continue
+
+    
+
+    print(num)
+    
+

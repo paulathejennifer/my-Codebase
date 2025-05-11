@@ -169,12 +169,106 @@ myProduct.prototype.discountedPrice=function(discountedPercentage){
 
 console.log(product1.discountedPrice(20));
 
+//The Shape Calculator
+// function Shape(name){
+//     this.name
+// }
+// Shape.prototype.calculateArea=function(){
+//    return "Area calculation not defined"
+// }
+    
+//     function Circle(radius){
+//         Shape.call(this, "Circle");
+//         this.radius= radius;
+//     }
+
+
+//     Circle.prototype.calculateArea= function(){
+
+    
+// return 22/7 * this.radius*this.radius
+//     }
+
+// const myCircle = new Circle(5);
+// console.log(myCircle.name);
+
+function Shape(name){
+    this.name = name;
+
+}
+Shape.prototype.calculateArea= function(){
+    return "Area undefined"
+}
+function Triangle(base,height){
+    Shape.call(this, "Triangle")
+    this.base=base;
+    this.height = height;
+}
+Triangle.prototype.calculateArea=function(){
+    return this.base * this.height/2
+}
+
+
+const tri = new Triangle (2,30)
+console.log(tri.calculateArea());
 
 
 
 
+function gcd(a,b){
+ a = Math.abs(a)
+ b = Math.abs(b)   
+ const larger = Math.max(a,b);
+ const smaller = Math.min(a,b);
+ while(b){
+    const temp = b;
+    b = a % b
+    a = temp;
+
+ }
+ return a
+}
+
+const numbers = (7,14)
+console.log(gcd(numbers));
 
 
+function lcm(a,b){
+    if(a===0||b===0){
+        return 0;
+    }
+    a=Math.abs(a);
+    b=Math.abs(b);
+    const larger = Math.max(a,b);
+    const smaller = Math.min(a,b);
+    let multiple = larger;
+    while(multiple % smaller !==0){
+        multiple+=larger;
+    }
+    return multiple;
+}
+console.log(`LCM of the two numbers is ${lcm(12,16)}`);
+
+
+function repeatingBusSchedules(busA, busB){
+if(busA===0||busB===0){
+    return 0;console.log(`LCM of the two numbers is ${lcm(12,16)}`);
+}
+busA=Math.abs(busA);
+busB=Math.abs(busB);
+
+const larger = Math.max(busA,busB);
+const smaller =Math.min(busA,busB);
+let multiple = larger;
+while(multiple%smaller !==0){
+    multiple+=larger
+}
+return multiple/60
+
+}
+console.log(`When they are going to meet is after ${repeatingBusSchedules(15,24)} hours`);
+
+function tilingFloor(dimension1,dimension2)
 
 
 
