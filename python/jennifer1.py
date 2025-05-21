@@ -46,10 +46,8 @@ def find_to_do_by_id(to_do_list, id_to_find):
         return None
 
 #function to get all pending tasks
-def get_pending_tasks(to_do_list):
-    return[item for item in to_do_list if item['status']=="pending"]
 
-
-def print_all_tasks(to_do_list):
-    for item in to_do_list:
-        print(f"Description: {item['decription']}, Status:"{item['status']})
+#positional
+def greet(name, msg):
+    print(f"{msg}, {name}")
+greet("Alice", "Hello")#positional args

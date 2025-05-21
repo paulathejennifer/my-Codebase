@@ -293,9 +293,38 @@ const name = "Nen"
 console.log(isPalindrome(name));
 
 
-function reverse(str){
-    reyturn
+function reverseStr(str){
+    return str.toUpperCase().split("").reverse().join("")
 }
+console.log(reverseStr("Hello"));
+
+function isValid(age){
+    return age >=18 && age<=60
+};
+
+console.log(isValid(17));
+console.log(isValid(18));
+console.log(isValid(19));
+console.log(isValid(59));
+console.log(isValid(60));
+console.log(isValid(61));
+
+
+function findTimeMet(carA, carB){
+    carA = Math.abs(carA);
+    carB = Math.abs(carB);
+
+    let larger = Math.max(carA, carB);
+    let smaller = Math.min(carA, carB);
+    let multiple = larger
+
+    while(multiple%smaller !== 0){
+        multiple+=larger
+    }
+    return multiple/60
+}
+
+console.log(`The two cars met after ${findTimeMet(15,42)} hours`);
 
 
 
