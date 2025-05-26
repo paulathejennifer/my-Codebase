@@ -6,10 +6,10 @@ def crete_to_do_object(description):
     "status":"pending"
     }
  
-def print_description_and_id(item){
-    print(f"Task ID:{id}, Description:{description}")\
+# def print_description_and_id(item){
+#     print(f"Task ID:{id}, Description:{description}")\
 
-}
+# }
 
 def check_id_match(item, id_to_check_against):
     return item['id']==id_to_check_against
@@ -125,51 +125,51 @@ def play_bowling():
 
     play_bowling()
         
-def play_archery():
-    print("___Welcome to Python Archery!___")
-    player_name = input("Please Enter Your Full Name:")
-    goal_score = random.randint(30, 60)
-    num_rounds= 5
-    points_per_round = []
-    total_score = 0
-    print(f"Hello, {player_name} your goal is to score {goal_score} points, Good Luck")
+# def play_archery():
+#     print("___Welcome to Python Archery!___")
+#     player_name = input("Please Enter Your Full Name:")
+#     goal_score = random.randint(30, 60)
+#     num_rounds= 5
+#     points_per_round = []
+#     total_score = 0
+#     print(f"Hello, {player_name} your goal is to score {goal_score} points, Good Luck")
 
-    for  round in range(1, num_rounds + 1):
-        while True:
-            try:
-                archery_shot_message = input(f"Shot {round}: How many shots did you score (0-15)?")
-                archery_shot = int(archery_shot_message)
-                if 0 <= archery_shot <= 15:
-                    points_per_round.append(archery_shot)
-                    total_score += archery_shot
-                    break
-                else:
-                    print("Invalid input. Enter a number from 0-15")
-            except ValueError:
-                print("Invalid input. Enter a number")
+#     for  round in range(1, num_rounds + 1):
+#         while True:
+#             try:
+#                 archery_shot_message = input(f"Shot {round}: How many shots did you score (0-15)?")
+#                 archery_shot = int(archery_shot_message)
+#                 if 0 <= archery_shot <= 15:
+#                     points_per_round.append(archery_shot)
+#                     total_score += archery_shot
+#                     break
+#                 else:
+#                     print("Invalid input. Enter a number from 0-15")
+#             except ValueError:
+#                 print("Invalid input. Enter a number")
 
-    print(f"Game over {player_name}")
-    print(f"Your total score is {total_score}")
-    print(f"Your target score was {goal_score}\n")
+#     print(f"Game over {player_name}")
+#     print(f"Your total score is {total_score}")
+#     print(f"Your target score was {goal_score}\n")
 
-    if total_score > goal_score:
-        print("Congratulations! you win")
+#     if total_score > goal_score:
+#         print("Congratulations! you win")
 
-    else:
-        print("Try again next time")
+#     else:
+#         print("Try again next time")
 
-    try:
-        with open ("archeryscores.txt") as file:
-            file.write(f"{player_name}\n")
-            file.write(f"{total_score}\n")
-            file.write(f"{goal_score}\n")
+#     try:
+#         with open ("archeryscores.txt") as file:
+#             file.write(f"{player_name}\n")
+#             file.write(f"{total_score}\n")
+#             file.write(f"{goal_score}\n")
 
-            print("scores saved to archeryscores.txt")
+#             print("scores saved to archeryscores.txt")
 
-    except IOError:
-            print("Couldn't add scores to file")
+#     except IOError:
+#             print("Couldn't add scores to file")
 
-play_archery()
+# play_archery()
 
 
 
@@ -183,3 +183,16 @@ class Person:
         #add introduce method
     def introduce(self):
         print(f"Hi my name is {self.name} and I am {self.age} years old")
+
+        #create instance and test
+        #class with constructor
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+            #create an object of car and printing it's details
+        # my_car = Car("Toyota", "Camry", 2021)
+        print(f"Car Details: {self.brand}\n{self.model}\n{self.year}")
+           
