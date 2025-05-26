@@ -195,4 +195,22 @@ class Car:
             #create an object of car and printing it's details
         # my_car = Car("Toyota", "Camry", 2021)
         print(f"Car Details: {self.brand}\n{self.model}\n{self.year}")
-           
+
+#Encapsulation
+#Create a back account class with a private balance property and deposit/withdraw methods that enforce rules
+
+
+class BankAccount:
+    def __init__(self, initial_balance = 0.0):
+        if initial_balance < 0:
+            raise ValueError("Initial balance cannot be negative.")
+        self.initial_balance = initial_balance
+
+    def deposit (self, amount):
+        if not isinstance (amount, (int,float)) or amount <= 0:
+            print("Deposit amount must be a positive number.")
+            return False
+
+        self.initial_balance += amount
+        print(f"Deposit ${amount:.2f}. New balance: ${self.initial_balance:.2f}")
+        return True
