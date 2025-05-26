@@ -171,12 +171,10 @@ def play_archery():
 
 play_archery()
 
-# create class       
-class Person:
-    pass
 
 
-#add properties
+
+#create class and add properties
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -184,3 +182,4 @@ class Person:
 
         #add introduce method
     def introduce(self):
+        print(f"Hi my name is {self.name} and I am {self.age} years old")
