@@ -444,3 +444,45 @@ function characterCount(str){
 
 console.log(characterCount("hello everybody"))
 
+//Anagram check 
+//1. Sorting
+//2. Character count
+
+function getCharcterCounts(str){
+    const counts = {}
+    const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g,"")
+    
+    for (let i =0; i<cleanStr.length;i++){
+        const char = cleanStr[i]
+
+        if(counts[char]){
+            counts[char]++
+        }
+        else{
+            counts[char]=1
+        }
+
+    }
+    return counts
+}
+
+
+function areAnagrams(str1, str2){
+    const counts1 = getCharcterCounts(str1)
+    const counts2 = getCharcterCounts(str2)
+
+    if(Object.keys(counts1).length !== Object.keys(counts2).length){
+        return false
+    }
+
+    for (const char in counts1){
+        if(counts1[char]!==counts2[char]){
+            return false
+        }
+    }
+    return true
+}
+console.log("___Anagram Check Test Cases___");
+console.log(`"b c0redi" and "debit card": ${areAnagrams("listen", "silent")}` );
+
+
