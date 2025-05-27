@@ -1,3 +1,5 @@
+const { count } = require("console");
+
 // assign  variable to be used later
 let myVar;
 myVar = 20;
@@ -326,5 +328,119 @@ function findTimeMet(carA, carB){
 
 console.log(`The two cars met after ${findTimeMet(15,42)} hours`);
 
+class Person{
+    constructor(name, age, country){
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
 
+    displayDetails(){
+        console.log(`Name: ${this.name}`);
+        console.log(`Age: ${this.age}`);
+        console.log(`Country:${this.country}`);
+        
+    }
+}
+
+//Create instances of the person class
+
+const person1 = new Person('Yerusalem Daanait', 25, 'Ethiopia');
+const person2 = new Person('Jackline Nyinawabagesera',27, 'Rwanda')
+
+
+//Display detai;ls of person1
+console.log('Person1 Details:');
+person1.displayDetails();
+
+
+//Display details of person2
+console.log('Person2 Details:');
+person2.displayDetails();
+
+
+class Rectangle {
+    constructor(width, height){
+        this.width = width;
+        this.height = height;
+    }
+
+    calculateArea(){
+        return this.width * this.height
+    }
+
+    calculatePerimeter(){
+        return 2 * (this.width + this.height)
+    }
+}
+
+//Create an instance of the rectangle class
+const rectangle = new Rectangle(12, 10);
+
+//Calculate area and perimeter of the rectangle
+const area = rectangle.calculateArea();
+const perimeter = rectangle.calculatePerimeter();
+
+//Display results 
+console.log(`Rectangle Area: ${area}`);
+console.log(`Rectangle Perimeter: ${perimeter}`);
+
+
+class Vehicle{
+    constructor(make, model, year){
+        this.make = make;
+        this.model = model;
+        this.year = year
+    }
+}
+
+class BankAccount{
+    constructor(accountNumber, balance){
+        this.accountNumber = accountNumber
+        this.balance = balance
+
+        console.log(`A/c No.: ${accountNumber}`);
+        console.log(`Opening Balance: $${balance}`);
+         
+    }
+    deposit(amount){
+        this.balance += amount
+        console.log(`Deposite: $${amount}`);
+        
+    }
+
+    withdraw(amount){
+        if(amount <= this.balance){
+            this.balance -= amount
+            console.log(`Withdrawn: $${amount}`);
+            
+        }
+    }
+}
+
+
+//Char counts
+//Initialize an empty object: Cunts to store the count of characters
+//Iterate over each character in the string
+//Check if the char is already a key in the objects
+//If it exists increment in counts
+//else add it with a count of 1
+
+function characterCount(str){
+    const counts = {}
+
+    for(let i = 0; i<str.length; i++){
+        const char = str[i]
+
+        if (counts[char]){
+            counts[char]++
+        }
+        else{
+            counts[char]= 1
+        }
+    }
+    return counts
+}
+
+console.log(characterCount("hello everybody"))
 
