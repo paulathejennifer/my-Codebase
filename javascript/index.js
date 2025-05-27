@@ -472,17 +472,18 @@ function areAnagrams(str1, str2){
     const counts2 = getCharcterCounts(str2)
 
     if(Object.keys(counts1).length !== Object.keys(counts2).length){
-        return false
+        return false;
     }
 
     for (const char in counts1){
         if(counts1[char]!==counts2[char]){
-            return false
+            return false;
         }
     }
     return true
 }
 console.log("___Anagram Check Test Cases___");
-console.log(`"b c0redi" and "debit card": ${areAnagrams("listen", "silent")}` );
+console.log(`"listen and silent": ${areAnagrams("listen", "silent")}` );
+console.log(`"hello and world": ${areAnagrams("hello", "world")}` );
 
 
