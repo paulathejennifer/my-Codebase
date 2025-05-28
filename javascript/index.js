@@ -386,13 +386,13 @@ console.log(`Rectangle Area: ${area}`);
 console.log(`Rectangle Perimeter: ${perimeter}`);
 
 
-class Vehicle{
-    constructor(make, model, year){
-        this.make = make;
-        this.model = model;
-        this.year = year
-    }
-}
+// class Vehicle{
+//     constructor(make, model, year){
+//         this.make = make;
+//         this.model = model;
+//         this.year = year
+//     }
+// }
 
 class BankAccount{
     constructor(accountNumber, balance){
@@ -501,7 +501,89 @@ class Vehicle{
         this.model = model;
         this.year = year;
     }
-    
+
+    displayDetails(){
+        console.log(`Make: ${this.make}`);
+        console.log(`Model: ${this.model}`);
+        console.log(`Year of launching: ${this.year}`);
+        
+        
+        
+    }
 }
 
 
+class Car extends Vehicle{
+    constructor(make, model, year, doors){
+        super(make,model,year)
+        this.doors = doors;
+    }
+}
+
+
+const { rejects } = require("assert");
+
+
+const passExams = false;
+
+const goToNairobi = new Promise(function(resolve, reject){
+ if(passExams){
+    resolve("You are going to Nairobi")
+ }
+ else{
+    reject("You will go for tuition")
+ }
+})
+.then((response)=>{
+    return response
+    
+})
+.catch((error)=>{
+    return error
+    
+})
+.finally(()=>{
+    return "Do not lose hope"
+    
+});
+
+console.log({goToNairobi});
+
+async function goToNairobiAsync(){
+    const result = await goToNairobi;
+    console.log(result);
+    
+}
+goToNairobiAsync()
+
+
+const getJob = false;
+
+const getJobPromise = new Promise((resolve, reject)=>{
+    if(getJob){
+        setTimeout(()=>{
+            resolve("You got a job")
+        }, 2000);
+    }
+
+        else{
+            setTimeout(()=>{
+                reject("Try again next time")
+            }, 2000);
+        }
+    
+});
+
+const getJobAsync = async ()=> {
+    try{
+    const jobResult = await getJobPromise;
+    console.log({jobResult});
+    }
+    catch(error){
+        console.log(error);
+        
+    }
+  
+    
+};
+getJobAsync();
