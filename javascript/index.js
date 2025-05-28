@@ -170,7 +170,11 @@ myProduct.prototype.discountedPrice=function(discountedPercentage){
 console.log(product1.discountedPrice(20));
 
 
+function isPalindrome(str) { 
 
+  return str === str.split(”).reverse().join(”); 
+
+}
 
 
 
