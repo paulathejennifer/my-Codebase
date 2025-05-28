@@ -177,7 +177,7 @@ function isPalindrome(str) {
 }
 
 
-
+const reverseString = (str) => str.split(”).reverse().join(”); 
 
 
 
