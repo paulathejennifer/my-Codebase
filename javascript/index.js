@@ -182,4 +182,4 @@ console.log(product1.discountedPrice(20));
 
 
 
-
+ 
