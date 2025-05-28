@@ -179,7 +179,11 @@ function isPalindrome(str) {
 
 const reverseString = (str) => str.split(”).reverse().join(”); 
 
+function filterEvenNumbers(numbers) { 
 
+  return numbers.filter(num => num % 2 === 0); 
+
+}
 
 
 
