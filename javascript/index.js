@@ -485,7 +485,14 @@ function areAnagrams(str1, str2){
 console.log("___Anagram Check Test Cases___");
 console.log(`"listen and silent": ${areAnagrams("listen", "silent")}` );
 console.log(`"hello and world": ${areAnagrams("hello", "world")}` );
-
-
+const county = true;
+let countValue = new Promise(function (resolve, reject) {
+    if (county) {
+        resolve("There is a count value.");
+    } else {
+        reject("There is no count value");
+    }
+});
+console.log(countValue);
 
 
