@@ -172,12 +172,12 @@ console.log(product1.discountedPrice(20));
 
 function isPalindrome(str) { 
 
-  return str === str.split(”).reverse().join(”); 
+  return str === str.split('').reverse().join(''); 
 
 }
 
 
-const reverseString = (str) => str.split(”).reverse().join(”); 
+const reverseString = (str) => str.split('').reverse().join(''); 
 
 function filterEvenNumbers(numbers) { 
 
@@ -193,7 +193,7 @@ function factorial(number) {
 
   } else { 
 
-    return number * factorial(number – 1); 
+    return number * factorial(number - 1); 
 
   } 
 
@@ -215,3 +215,25 @@ function factorial(number) {
   return true; 
 
 } 
+
+
+//Delayesd welcome message
+//1. Define a function delayedMessage which takes in milliseconds as Parameter
+//2. Wait for 3 sec
+//3. Print 'Welcome $name'
+//4. call delayedMessage for 3 users
+
+function delayedWelcome(ms){
+  return new Promise(resolve => setTimeout(resolve,ms));
+}
+
+async function printMessage(name){
+await delayedWelcome(3000);
+console.log(`Welcome ${name}`);
+
+}
+
+printMessage("Jennifer")
+printMessage("Shirley")
+printMessage("Ema")
+
