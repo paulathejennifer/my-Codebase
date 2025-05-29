@@ -237,3 +237,17 @@ printMessage("Jennifer")
 printMessage("Shirley")
 printMessage("Ema")
 
+// Retry API request with limit
+//1. Initialize a variable retryCount at 0
+//1. Defiine a function tryFetch()
+//2. return a promise that resolves in setInterval for 2 secs  where retryCount increments 
+//Print Attempt (retryCount)
+
+//using if else
+//if retryCount is strictly equal to 3 then clearInterval
+//log 'Request failed afterv 3 attempts'
+//reject()
+
+//call the function tryFetch
+
+
