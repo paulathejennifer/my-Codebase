@@ -250,4 +250,36 @@ printMessage("Ema")
 
 //call the function tryFetch
 
+let retryCount = 0;
 
+function tryFetch(){
+  return new Promise((resolve, reject)=>{
+    const interval = setInterval(()=>{
+      retryCount++;
+      console.log(`Attempt: ${retryCount}`);
+      
+
+
+    if (retryCount === 3){
+      clearInterval(interval);
+      resolve("Request failed after 3 attempts");
+      
+    } else if(retryCount > 3){
+      clearInterval(interval);
+      reject("Login failed after 3 attempts")
+    }
+  
+  }, 2000);
+ });
+  
+}
+tryFetch()
+
+.then(message => {
+  console.log(message);
+  
+})
+.catch(error => {
+  console.log(error);
+  
+})
