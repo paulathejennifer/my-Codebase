@@ -10,7 +10,7 @@ class Member:
     def __init__(self,name,id):
         self.name = name
         self.id = id
-        self.
+        self.borrowed_books = []
 
 class Library:
     def __init__(self):
@@ -22,4 +22,8 @@ class Library:
             if book not in self.books:
                 self.books.append(book)
         def borrow_book(self,book, member):
-            
+            if book.is_available:
+                book.is_available=False;
+                member.borrowed_books.append(book)
+
+
