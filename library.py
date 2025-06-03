@@ -21,4 +21,5 @@ class Library:
         def add_book(self, book):
             if book not in self.books:
                 self.books.append(book)
-        def borrow_book
+        def borrow_book(self,book, member):
+            
