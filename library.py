@@ -23,7 +23,11 @@ class Library:
                 self.books.append(book)
         def borrow_book(self,book, member):
             if book.is_available:
-                book.is_available=False;
+                book.is_available=False
                 member.borrowed_books.append(book)
+                return True
+            return False
+
+        
 
 
