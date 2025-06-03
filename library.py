@@ -46,3 +46,19 @@ class Library:
 #>>> lib.borrow_book(book1, member1)
 
 #True
+
+
+class Patient:
+#     def __init__(self, name, id):
+#         self.name = name
+#         self.id = id
+#         self._medical_history = []
+
+# # class Doctor:
+# #     def __init__(self, name, specialization):
+# #         self.name = name
+# #         self.specialization = specialization
+# #         self.available = True
+
+
+# # class A
