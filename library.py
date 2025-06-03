@@ -29,20 +29,3 @@ class Library:
             return False
 
         
-#TESTING SCRIPT
-
-#(>>> lib = Library()
-
-#>>> book1 = Book("Clean Codes", "48723819", "Richard Martini")
-
-#>>> member1 = Member("Jennifer Otis", "897784987490")
-
-#>>> lib.add_book(book1)
-
-#>>> lib.borrow_book(book1, memmber1)
-
-#>>> lib.borrow_book(book1, memmber1)
-
-#>>> lib.borrow_book(book1, member1)
-
-#True
