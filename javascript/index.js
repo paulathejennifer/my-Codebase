@@ -275,6 +275,8 @@ console.log(`When they are going to meet is after ${repeatingBusSchedules(15,24)
   
 //   } 
 
+function isPalindrome(str) { 
+
 
 function findMaxNumber(arr){
     return Math.max(...arr)
@@ -282,6 +284,34 @@ function findMaxNumber(arr){
 const nums = [1,2,3,4,6,2,89]
 console.log(findMaxNumber(nums));
 console.log(findMinNumber(nums));
+
+  return str === str.split('').reverse().join(''); 
+
+}
+
+
+const reverseString = (str) => str.split('').reverse().join(''); 
+
+function filterEvenNumbers(numbers) { 
+
+  return numbers.filter(num => num % 2 === 0); 
+
+}
+
+function factorial(number) { 
+
+  if (number === 0 || number === 1) { 
+
+    return 1; 
+
+  } else { 
+
+    return number * factorial(number - 1); 
+
+  } 
+
+} 
+
 
 function findMinNumber(arr){
     return Math.min(...arr)
@@ -310,6 +340,8 @@ console.log(isValid(19));
 console.log(isValid(59));
 console.log(isValid(60));
 console.log(isValid(61));
+
+ function isPrime(num) { 
 
 
 function findTimeMet(carA, carB){
@@ -385,6 +417,17 @@ const perimeter = rectangle.calculatePerimeter();
 console.log(`Rectangle Area: ${area}`);
 console.log(`Rectangle Perimeter: ${perimeter}`);
 
+  if (num <= 1) return false; 
+
+  for (let i = 2; i <= Math.sqrt(num); i++) { 
+
+    if (num % i === 0) return false; 
+
+  } 
+
+
+  return true; 
+
 
 // class Vehicle{
 //     constructor(make, model, year){
@@ -393,6 +436,9 @@ console.log(`Rectangle Perimeter: ${perimeter}`);
 //         this.year = year
 //     }
 // }
+
+} 
+
 
 class BankAccount{
     constructor(accountNumber, balance){
@@ -587,3 +633,71 @@ const getJobAsync = async ()=> {
     
 };
 getJobAsync();
+
+//Delayesd welcome message
+//1. Define a function delayedMessage which takes in milliseconds as Parameter
+//2. Wait for 3 sec
+//3. Print 'Welcome $name'
+//4. call delayedMessage for 3 users
+
+function delayedWelcome(ms){
+  return new Promise(resolve => setTimeout(resolve,ms));
+}
+
+async function printMessage(name){
+await delayedWelcome(3000);
+console.log(`Welcome ${name}`);
+
+}
+
+printMessage("Jennifer")
+printMessage("Shirley")
+printMessage("Ema")
+
+// Retry API request with limit
+//1. Initialize a variable retryCount at 0
+//1. Defiine a function tryFetch()
+//2. return a promise that resolves in setInterval for 2 secs  where retryCount increments 
+//Print Attempt (retryCount)
+
+//using if else
+//if retryCount is strictly equal to 3 then clearInterval
+//log 'Request failed afterv 3 attempts'
+//reject()
+
+//call the function tryFetch
+
+let retryCount = 0;
+
+function tryFetch(){
+  return new Promise((resolve, reject)=>{
+    const interval = setInterval(()=>{
+      retryCount++;
+      console.log(`Attempt: ${retryCount}`);
+      
+
+
+    if (retryCount === 3){
+      clearInterval(interval);
+      resolve("Request failed after 3 attempts");
+      
+    } else if(retryCount > 3){
+      clearInterval(interval);
+      reject("Login failed after 3 attempts")
+    }
+  
+  }, 2000);
+ });
+  
+}
+tryFetch()
+
+.then(message => {
+  console.log(message);
+  
+})
+.catch(error => {
+  console.log(error);
+  
+})
+
