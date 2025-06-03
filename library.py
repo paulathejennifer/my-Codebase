@@ -52,7 +52,7 @@ class Patient:
     def __init__(self, name, id):
         self.name = name
         self.id = id
-#         self._medical_history = []
+        self._medical_history = []
 
 # # class Doctor:
 # #     def __init__(self, name, specialization):
