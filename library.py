@@ -18,4 +18,7 @@ class Library:
         self.members = []
 
 
-        def add_book(self, book)
+        def add_book(self, book):
+            if book not in self.books:
+                self.books.append(book)
+        def borrow_book
