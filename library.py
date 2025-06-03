@@ -56,9 +56,32 @@ class Patient:
 
 class Doctor:
     def __init__(self, name, specialization):
-# #         self.name = name
-# #         self.specialization = specialization
-# #         self.available = True
+        self.name = name
+        self.specialization = specialization
+        self.available = True
 
 
-# # class A
+class Appointment:
+    def __init__(self, patient, doctor, date):
+        self.patient = patient
+        self.doctor = doctor
+        self.date = date
+        doctor.available= False
+
+
+class Hospital:
+    def __init__ (self):
+        self.patients = []
+        self.doctors = []
+
+    def add_patients(self, patient):
+        self.patients.append(patient)
+
+        #TEST SCRIPT
+#>>> from library import *
+#>>> hospital = Hospital()
+#>>> patient1 = Patient("John Gitau", "P004")
+#>>> doctor1 = Doctor("Maggie Otile", "Cardiology")
+#>>> hospital.add_patients(patient1)
+#>>> appointment = Appointment(patient1,doctor1, "2025-06-05")
+
