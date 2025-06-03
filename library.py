@@ -18,10 +18,10 @@ class Library:
         self.members = []
 
 
-        def add_book(self, book):
+    def add_book(self, book):
             if book not in self.books:
                 self.books.append(book)
-        def borrow_book(self,book, member):
+    def borrow_book(self,book, member):
             if book.is_available:
                 book.is_available=False
                 member.borrowed_books.append(book)
