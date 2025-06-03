@@ -55,7 +55,7 @@ class Patient:
         self._medical_history = []
 
 class Doctor:
-# #     def __init__(self, name, specialization):
+    def __init__(self, name, specialization):
 # #         self.name = name
 # #         self.specialization = specialization
 # #         self.available = True
