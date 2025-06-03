@@ -54,7 +54,7 @@ class Patient:
         self.id = id
         self._medical_history = []
 
-# # class Doctor:
+class Doctor:
 # #     def __init__(self, name, specialization):
 # #         self.name = name
 # #         self.specialization = specialization
